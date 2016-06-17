@@ -7,7 +7,8 @@
 3. Install virtualenvwrapper or virtualenvwrapper-win
 4. Create a virtual environment 
 5. Install flask 
-6. Checkout the next branch 
+6. Run our flask project
+7. Checkout the next branch 
 
 ## 1. Install Python
 
@@ -54,7 +55,13 @@ $ pip install flask
 ```
 
 
-## 6. Checkout the next branch
+## 6. Run our flask project
+```
+python hello.py
+ * Running on http://localhost:5000/
+```
+
+## 7. Checkout the next branch
 ```
 $ git checkout hello 
 ```
