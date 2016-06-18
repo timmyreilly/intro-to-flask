@@ -1,5 +1,7 @@
 tokens.py
 
+.vscode 
+
 # Python cache
 __pycache__/
 *.pyc
