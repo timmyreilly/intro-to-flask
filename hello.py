@@ -13,7 +13,7 @@ app.config['SECRET_KEY'] = 'hard to guess'
 bootstrap = Bootstrap(app)
 
 class SearchForm(Form):
-    searchterm = StringField('What would you like to search?', validators=[Required()])
+    searchterm = StringField('What Wikipedia article would you like to analyze?', validators=[Required()])
     submit = SubmitField('Submit')
 
 @app.route("/")
