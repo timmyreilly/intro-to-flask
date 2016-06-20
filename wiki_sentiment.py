@@ -8,6 +8,7 @@ def get_sentiment_from_url(url='https://en.wikipedia.org/wiki/Monty_Python'):
 
     soup = BeautifulSoup(r.text)
     l = soup.find_all('p')
+    h = soup.find_all('h1')
     #print l[0].text
 
     words = l[0].text
@@ -18,7 +19,7 @@ def get_sentiment_from_url(url='https://en.wikipedia.org/wiki/Monty_Python'):
     r = requests.post(url, data=json.dumps(data), headers=headers)
 
     content = json.loads(r.content)
-    return content['documents'][0]['score']
+    return content['documents'][0]['score'], str(h[0].text) 
 
 
 

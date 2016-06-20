@@ -25,18 +25,9 @@ def search():
     form = SearchForm()
     if form.validate_on_submit():
         session['searchterm'] = form.searchterm.data 
-        session['sentiment'] = get_sentiment_from_url(session.get('searchterm'))
+        session['sentiment'], session['titlearticle'] = get_sentiment_from_url(session.get('searchterm'))
         return redirect(url_for('search'))
-    return render_template('search.html', form=form, searchterm=session.get('searchterm'), number=session.get('sentiment'))
-
-# @app.route("/search", methods=['GET', 'POST'])
-# def search():
-#     form = SearchForm()
-#     if form.validate_on_submit():
-#         session['searchterm'] = form.searchterm.data 
-#         sentiment = get_sentiment_from_url(session.get('searchterm'))
-#         return redirect(url_for('search'))
-#     return render_template('search.html', form=form, searchterm=session.get('searchterm'), number=sentiment)
+    return render_template('search.html', form=form, searchterm=session.get('searchterm'), number=session.get('sentiment'), titlearticle=session.get('titlearticle'))
 
 if __name__ == "__main__":
     app.run(debug=True)

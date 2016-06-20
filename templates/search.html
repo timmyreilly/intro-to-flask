@@ -5,8 +5,9 @@
 
 {% block page_content %}
 <div class="page-header">
-    <h1>{% if searchterm %}You searched {{ searchterm }}{% else %}You haven't searched yet{% endif %}!</h1>
+    <h1>{% if titlearticle %}You searched {{ titlearticle }}{% else %}You haven't searched yet{% endif %}!</h1>
     <h2>{% if number %}The sentiment is {{ number }}{% else %} NOTHING {% endif %}</h2>
+    <h3>{% if searchterm %}Here's the url you entered: {{ searchterm }} {% endif %}
 </div>
 {{ wtf.quick_form(form) }}
 {% endblock %}
