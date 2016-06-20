@@ -1,12 +1,7 @@
 #Intro to Flask 
 
-Now that we've finished buildling a resume let's learn about using forms! 
+Now that we're familiar with forms let's build a small application!
 
-Just like the very handy bootstrap extension, their is a form extension called [Flask-WTF](https://flask-wtf.readthedocs.io/en/latest/).
-Flask-WTF is an extension of the [WTForms](http://wtforms.readthedocs.io/en/latest/) package
+In this demo we'll have a small app that we'll show us the 'sentiment' of articles from wikipedia using a machine learning service provided by Microsoft. 
 
-### To Install 
-
-`
-(helloworld) $ pip install flask-wtf 
-`
+### Let's build our form: 
