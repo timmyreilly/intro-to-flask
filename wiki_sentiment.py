@@ -6,7 +6,7 @@ from tokens import *
 def get_sentiment_from_url(url='https://en.wikipedia.org/wiki/Monty_Python'):
     r = requests.get(url)
 
-    soup = BeautifulSoup(r.text)
+    soup = BeautifulSoup(r.text, "html.parser")
     l = soup.find_all('p')
     h = soup.find_all('h1')
     #print l[0].text

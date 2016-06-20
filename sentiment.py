@@ -9,7 +9,7 @@ payload = {
 }
 r = requests.get(url % payload)
 
-soup = BeautifulSoup(r.text)
+soup = BeautifulSoup(r.text, "html.parser")
 l = soup.find_all('p')
 print l[0].text
 
