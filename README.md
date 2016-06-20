@@ -63,5 +63,5 @@ python hello.py
 
 ## 7. Checkout the next branch
 ```
-$ git checkout hello 
+$ git pull origin hello 
 ```
