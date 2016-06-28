@@ -16,11 +16,11 @@ class SearchForm(Form):
     searchterm = StringField('What Wikipedia article would you like to analyze?', validators=[Required()])
     submit = SubmitField('Submit')
 
-@app.route("/")
+@app.route("/resume")
 def hello():
     return render_template('index.html')
 
-@app.route("/search", methods=['GET', 'POST'])
+@app.route("/", methods=['GET', 'POST'])
 def search():
     form = SearchForm()
     if form.validate_on_submit():
